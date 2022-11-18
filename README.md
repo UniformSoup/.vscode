@@ -2,5 +2,5 @@
 My VSCode tasks.json, and launch.json
 
 ```bash
-git clone --bare https://github.com/UniformSoup/VSCodeWorkspace.git . | rm -rf .git
+git clone https://github.com/UniformSoup/VSCodeWorkspace.git . && rm -rf .git
 ```
