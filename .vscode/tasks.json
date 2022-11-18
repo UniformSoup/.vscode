@@ -1,0 +1,62 @@
+// pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Debug Build",
+      "type": "shell",
+      "command": "cmake --build Debug",
+      "problemMatcher":
+      {
+        "base" : "$gcc",
+        "fileLocation" : "absolute"
+      },
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Release Build",
+      "type": "shell",
+      "command": "cmake --build Release",
+      "problemMatcher":
+      {
+        "base" : "$gcc",
+        "fileLocation" : "absolute"
+      },
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command":
+      [
+        "cmake --build Debug --target clean &",
+        "cmake --build Release --target clean"
+      ],
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Configure",
+      "type": "shell",
+      "command":
+      [
+        "mkdir Debug &",
+        "mkdir Release &",
+        "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=../CMakeToolchains/mingw-windows.cmake &",
+        "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=../CMakeToolchains/mingw-windows.cmake"
+      ],
+      "presentation": { "clear": true }
+    },
+    {
+      "label": "Count Lines of C/C++ Code",
+      "type": "shell",
+      "command":
+      [
+        "wc -l **/*.c{,?,??} **/*.h{,?,??} *.c{,?,??} *.h{,?,??} 2> nul"
+      ],
+      "presentation": { "clear": true }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "configurations":
+  [
+    {
+      "name": "Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "setupCommands":
+      [
+        {
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Debug Build",
+
+      "args" :
+      [
+        
+      ]
+      
+    },
+    {
+      "name": "Release",
+      "request": "launch",
+      "type": "cppdbg",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
+      "preLaunchTask": "Release Build"
+    }
+  ]
+}
