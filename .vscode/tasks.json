@@ -31,7 +31,7 @@
       "type": "shell",
       "command":
       [
-        "cmake --build Debug --target clean &",
+        "cmake --build Debug --target clean &&",
         "cmake --build Release --target clean"
       ],
       "presentation": { "clear": true },
@@ -42,10 +42,10 @@
       "type": "shell",
       "command":
       [
-        "mkdir Debug &",
-        "mkdir Release &",
-        "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=../CMakeToolchains/mingw-windows.cmake &",
-        "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=../CMakeToolchains/mingw-windows.cmake"
+        "mkdir Debug &&",
+        "mkdir Release &&",
+        "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
+        "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
       ],
       "presentation": { "clear": true }
     },
@@ -54,7 +54,10 @@
       "type": "shell",
       "command":
       [
-        "wc -l **/*.c{,?,??} **/*.h{,?,??} *.c{,?,??} *.h{,?,??} 2> nul"
+        "echo -n \"Lines of C and C++: \" &&",
+        "find -regex '.*\\.\\(hpp\\|cpp\\|c\\|h\\|hxx\\|cxx\\|cc\\|hh\\)$' |",
+        "grep -E -i -v '^./(Debug|Release)' |",
+        "xargs awk 'END{print NR}'"
       ],
       "presentation": { "clear": true }
     }

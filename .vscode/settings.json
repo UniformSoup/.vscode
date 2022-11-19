@@ -3,15 +3,21 @@
     {
         "MSYS2":
         {
-            "path": "C:/msys64/msys2_shell.cmd",
+            "path": "C:/msys64/usr/bin/bash.exe",
             "args":
             [
-                "-defterm",
-                "-here",
-                "-no-start",
-                "-mingw64"
-            ]
+                "--login",
+                "-i"
+            ],
+            "env":
+            {
+                "MSYSTEM": "MINGW64",
+                "MSYS2_PATH_TYPE": "inherit",
+                "CHERE_INVOKING": "1",
+                "MSVSCODE": "1"
+            },
+            "color": "terminal.ansiMagenta"
         },
     },
-    "terminal.integrated.defaultProfile.windows": "MSYS2",
+    "terminal.integrated.defaultProfile.windows": "MSYS2"
 }
