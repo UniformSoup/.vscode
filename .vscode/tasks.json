@@ -1,4 +1,3 @@
-// pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
 {
   "version": "2.0.0",
   "tasks": [
@@ -42,8 +41,7 @@
       "type": "shell",
       "command":
       [
-        "mkdir Debug &&",
-        "mkdir Release &&",
+        "mkdir Debug Release &&",
         "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
         "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
       ],
