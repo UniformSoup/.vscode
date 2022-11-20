@@ -19,7 +19,7 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [
-                "RELEASE"
+                "NDEBUG"
             ],
             "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "cStandard": "gnu17",
