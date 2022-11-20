@@ -10,4 +10,4 @@ With these packages installed:
 ```bash
 pacman -S base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja git
 ```
-It also requires the [C/C++ Extension](https://github.com/microsoft/vscode-cpptools)
+It also requires the [C/C++ Extension](https://github.com/microsoft/vscode-cpptools) for VS Code.
