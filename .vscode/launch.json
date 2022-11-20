@@ -5,7 +5,8 @@
       "name": "Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/Debug/Application.exe",
+      "program": "${workspaceFolder}/Debug/Build.exe",
+      "targetArchitecture": "x86_64",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
       "setupCommands":
@@ -21,14 +22,13 @@
       [
         
       ]
-      
     },
     {
       "name": "Release",
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/Release/Application.exe",
+      "program": "${workspaceFolder}/Release/Build.exe",
       "preLaunchTask": "Release Build",
 
       "args" :

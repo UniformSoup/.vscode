@@ -5,59 +5,74 @@
       "label": "Debug Build",
       "type": "shell",
       "command": "cmake --build Debug",
-      "problemMatcher":
-      {
-        "base" : "$gcc",
-        "fileLocation" : "absolute"
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": "absolute"
       },
-      "presentation": { "clear": true },
-      "group": { "kind": "build" }
+      "presentation": {
+        "clear": true
+      },
+      "group": {
+        "kind": "build"
+      }
     },
     {
       "label": "Release Build",
       "type": "shell",
       "command": "cmake --build Release",
-      "problemMatcher":
-      {
-        "base" : "$gcc",
-        "fileLocation" : "absolute"
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": "absolute"
       },
-      "presentation": { "clear": true },
-      "group": { "kind": "build" }
+      "presentation": {
+        "clear": true
+      },
+      "group": {
+        "kind": "build"
+      }
     },
     {
       "label": "Clean",
       "type": "shell",
-      "command":
-      [
+      "command": [
         "cmake --build Debug --target clean &&",
         "cmake --build Release --target clean"
       ],
-      "presentation": { "clear": true },
-      "group": { "kind": "build" }
+      "presentation": {
+        "clear": true
+      },
+      "group": {
+        "kind": "build"
+      }
     },
     {
       "label": "Configure",
       "type": "shell",
-      "command":
-      [
+      "command": [
         "mkdir Debug Release &&",
         "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
         "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
       ],
-      "presentation": { "clear": true }
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build"
+      }
     },
     {
       "label": "Count Lines of C/C++ Code",
       "type": "shell",
-      "command":
-      [
+      "command": [
         "echo -n \"Lines of C and C++: \" &&",
         "find -regex '.*\\.\\(hpp\\|cpp\\|c\\|h\\|hxx\\|cxx\\|cc\\|hh\\)$' |",
         "grep -E -i -v '^./(Debug|Release)' |",
         "xargs awk 'END{print NR}'"
       ],
-      "presentation": { "clear": true }
+      "presentation": {
+        "clear": true
+      }
     }
   ]
 }

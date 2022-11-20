@@ -1,23 +1,19 @@
 {
     "terminal.integrated.profiles.windows":
     {
-        "MSYS2":
+        "MINGW64":
         {
+            "source":"Git Bash",
             "path": "C:/msys64/usr/bin/bash.exe",
-            "args":
-            [
-                "--login",
-                "-i"
-            ],
+            "args": [ "-li" ],
             "env":
             {
                 "MSYSTEM": "MINGW64",
                 "MSYS2_PATH_TYPE": "inherit",
-                "CHERE_INVOKING": "1",
-                "MSVSCODE": "1"
+                "CHERE_INVOKING": "enabled_from_arguments"
             },
             "color": "terminal.ansiMagenta"
         },
     },
-    "terminal.integrated.defaultProfile.windows": "MSYS2"
+    "terminal.integrated.defaultProfile.windows": "MINGW64"
 }
