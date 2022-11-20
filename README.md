@@ -1,5 +1,5 @@
 # VSCodeWorkspace
-My VSCode tasks.json, and launch.json
+My VS Code Environment for C++.
 
 ```bash
 git clone https://github.com/UniformSoup/VSCodeWorkspace.git . && rm -rf .git LICENSE README.md
