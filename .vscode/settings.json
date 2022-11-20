@@ -3,7 +3,7 @@
     {
         "MINGW64":
         {
-            "source":"Git Bash",
+            "source": "Git Bash",
             "path": "C:/msys64/usr/bin/bash.exe",
             "args": [ "-li" ],
             "env":
