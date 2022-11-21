@@ -15,4 +15,10 @@ With these packages installed:
 ```bash
 pacman -S base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja mingw-w64-x86_64-github-cli
 ```
+
 It also requires the [C/C++ Extension](https://github.com/microsoft/vscode-cpptools) for VS Code.
+
+Don't forget to login to github on new machines:
+```bash
+gh auth login
+```
