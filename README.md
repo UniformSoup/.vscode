@@ -7,7 +7,7 @@ curl -L https://github.com/UniformSoup/VSCodeWorkspace/tarball/main | tar --excl
 ```
 If the directory is empty you can just run:
 ```bash
-git clone https://github.com/UniformSoup/VSCodeWorkspace.git . | rm -rf .git LICENSE README.md
+git clone https://github.com/UniformSoup/VSCodeWorkspace.git . && rm -rf .git LICENSE README.md
 ```
 
 This setup assumes you have the latest version of [MSYS2](https://msys2.org/#installation).
