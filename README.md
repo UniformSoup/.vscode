@@ -2,7 +2,7 @@
 My VS Code Environment for C++.
 
 ```bash
-git clone https://github.com/UniformSoup/VSCodeWorkspace.git . && rm -rf .git LICENSE README.md
+curl -L https://github.com/UniformSoup/VSCodeWorkspace/tarball/main | tar --exclude='README.md' --exclude='LICENSE' --strip=1 -zx
 ```
 
 This setup assumes you have the latest version of [MSYS2](https://msys2.org/#installation).
