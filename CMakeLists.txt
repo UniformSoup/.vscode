@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
 
 set(FOLDER_STEM "")
+set(FOLDER_STEM_NO_SPACES "")
 cmake_path(GET CMAKE_SOURCE_DIR STEM FOLDER_STEM)
+string(REPLACE " " "_" FOLDER_STEM_NO_SPACES ${FOLDER_STEM})
 
-project("${FOLDER_STEM}" VERSION 1.0)
+project("${FOLDER_STEM_NO_SPACES}" VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -14,3 +16,4 @@ set(
 )
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${FOLDER_STEM}")

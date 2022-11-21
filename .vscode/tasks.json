@@ -1,6 +1,7 @@
 {
   "version": "2.0.0",
-  "tasks": [
+  "tasks":
+  [
     {
       "label": "Debug Build",
       "type": "shell",
@@ -49,14 +50,14 @@
       "label": "Configure CMake",
       "type": "shell",
       "command": [
-        "mkdir -p Debug -p Release &&",
+        "rm -rf Debug Release &&",
+        "mkdir Debug Release &&",
         "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
         "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
       ],
       "presentation": {
         "clear": true
       },
-      "problemMatcher": [],
       "group": {
         "kind": "build"
       }
@@ -77,20 +78,24 @@
     {
       "label": "View File Assembly",
       "type": "shell",
-      "command":
-      [
+      "command": [
         "[[ '${fileBasename}' == *.[ch]* ]] &&",
-          "(gcc -S -fverbose-asm '${fileBasename}' -o '/tmp/${fileBasenameNoExtension}.s') &&",
-          "code '/tmp/${fileBasenameNoExtension}.s' ||",
-          "echo \"The current file is not a C or C++ file extension.\""
+        "(gcc -fno-asynchronous-unwind-tables -fno-exceptions ",
+        "-funroll-loops -fno-rtti -O -masm=intel -march=haswell -fverbose-asm ",
+        "-S '${fileBasename}' -o '/tmp/${fileBasenameNoExtension}.s') &&",
+        "code '/tmp/${fileBasenameNoExtension}.s' ||",
+        "echo \"The current file is not a C or C++ file extension.\""
       ],
       "problemMatcher": {
         "base": "$gcc",
         "fileLocation": "absolute"
       },
-      "presentation": { "clear": true },
-      "options": { "cwd": "${fileDirname}" },
-    },
-
+      "presentation": {
+        "clear": true
+      },
+      "options": {
+        "cwd": "${fileDirname}"
+      }
+    }
   ]
 }
