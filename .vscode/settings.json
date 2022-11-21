@@ -4,12 +4,12 @@
         "MINGW64":
         {
             "path": "C:/msys64/usr/bin/bash.exe",
-            "args": [ "-li" ],
             "env":
             {
                 "MSYSTEM": "MINGW64",
                 "MSYS2_PATH_TYPE": "inherit",
-                "CHERE_INVOKING": "1"
+                "CHERE_INVOKING": "enable_from_arguments",
+                "MSYSCON": "defterm"
             },
             "color": "terminal.ansiMagenta"
         },
