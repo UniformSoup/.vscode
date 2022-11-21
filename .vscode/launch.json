@@ -5,7 +5,7 @@
       "name": "Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/Debug/Build.exe",
+      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
       "targetArchitecture": "x86_64",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
@@ -28,7 +28,7 @@
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/Release/Build.exe",
+      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
       "preLaunchTask": "Release Build",
 
       "args" :

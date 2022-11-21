@@ -46,10 +46,10 @@
       }
     },
     {
-      "label": "Configure",
+      "label": "Configure CMake",
       "type": "shell",
       "command": [
-        "mkdir Debug Release &&",
+        "mkdir -p Debug -p Release &&",
         "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
         "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
       ],
@@ -73,6 +73,24 @@
       "presentation": {
         "clear": true
       }
-    }
+    },
+    {
+      "label": "View File Assembly",
+      "type": "shell",
+      "command":
+      [
+        "[[ '${fileBasename}' == *.[ch]* ]] &&",
+          "(gcc -S -fverbose-asm '${fileBasename}' -o '/tmp/${fileBasenameNoExtension}.s') &&",
+          "code '/tmp/${fileBasenameNoExtension}.s' ||",
+          "echo \"The current file is not a C or C++ file extension.\""
+      ],
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": "absolute"
+      },
+      "presentation": { "clear": true },
+      "options": { "cwd": "${fileDirname}" },
+    },
+
   ]
 }
