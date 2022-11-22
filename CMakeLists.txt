@@ -1,18 +1,18 @@
 cmake_minimum_required(VERSION 3.20)
 
 set(FOLDER_STEM "")
-set(FOLDER_STEM_NO_SPACES "")
+set(FOLDER_STEM_TARGET "")
 cmake_path(GET CMAKE_SOURCE_DIR STEM FOLDER_STEM)
-string(REPLACE " " "_" FOLDER_STEM_NO_SPACES ${FOLDER_STEM})
+string(REGEX REPLACE "[^0-9a-zA-Z_+\-\.]" "_" FOLDER_STEM_TARGET ${FOLDER_STEM})
 
-project("${FOLDER_STEM_NO_SPACES}" VERSION 1.0)
+project("${FOLDER_STEM_TARGET}" VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(
     SRC_FILES
-    
+
 )
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
