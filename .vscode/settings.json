@@ -4,15 +4,18 @@
         "MINGW64":
         {
             "path": "C:/msys64/usr/bin/bash.exe",
-            "env":
-            {
+            "args": ["--login", "-i"],
+            "env": 
+            { 
                 "MSYSTEM": "MINGW64",
                 "MSYS2_PATH_TYPE": "inherit",
-                "CHERE_INVOKING": "enable_from_arguments",
+                "CHERE_INVOKING": "1",
                 "MSYSCON": "defterm"
             },
             "color": "terminal.ansiMagenta"
-        },
+        }
     },
-    "terminal.integrated.defaultProfile.windows": "MINGW64"
+    "terminal.integrated.defaultProfile.windows": "MINGW64",
+    "task.problemMatchers.neverPrompt": true,
+    "debug.onTaskErrors": "showErrors"
 }

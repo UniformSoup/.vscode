@@ -6,15 +6,17 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
-      "targetArchitecture": "x86_64",
+      "avoidWindowsConsoleRedirection": false,
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "setupCommands":
-      [
-        {
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
+      "miDebuggerPath": "C:/msys2/mingw64/bin/gdb.exe",
+      "externalConsole": true,
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          }
       ],
       "preLaunchTask": "Debug Build",
 
