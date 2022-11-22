@@ -6,11 +6,8 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
-      "avoidWindowsConsoleRedirection": false,
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys2/mingw64/bin/gdb.exe",
-      "externalConsole": true,
       "setupCommands": [
           {
               "description": "Enable pretty-printing for gdb",
