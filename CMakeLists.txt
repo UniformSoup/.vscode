@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(
     SRC_FILES
-
+    
 )
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
