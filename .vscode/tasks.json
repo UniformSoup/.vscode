@@ -5,7 +5,8 @@
     {
       "label": "Debug Build",
       "type": "shell",
-      "command": "cmake --build Debug",
+      "command": ".vscode/tasks/Build.sh",
+      "args": ["Debug"],
       "problemMatcher": {
         "base": "$gcc",
         "fileLocation": "absolute"
@@ -20,7 +21,8 @@
     {
       "label": "Release Build",
       "type": "shell",
-      "command": "cmake --build Release",
+      "command": ".vscode/tasks/Build.sh",
+      "args": ["Release"],
       "problemMatcher": {
         "base": "$gcc",
         "fileLocation": "absolute"
@@ -35,10 +37,7 @@
     {
       "label": "Clean",
       "type": "shell",
-      "command": [
-        "cmake --build Debug --target clean &&",
-        "cmake --build Release --target clean"
-      ],
+      "command": ".vscode/tasks/Clean.sh",
       "presentation": {
         "clear": true
       },
@@ -49,12 +48,7 @@
     {
       "label": "Configure CMake",
       "type": "shell",
-      "command": [
-        "rm -rf Debug Release &&",
-        "mkdir Debug Release &&",
-        "cmake -S . -B Release -G Ninja -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake &&",
-        "cmake -S . -B Debug -G Ninja -D CMAKE_BUILD_TYPE=DEBUG -D CMAKE_TOOLCHAIN_FILE=mingw-windows.cmake"
-      ],
+      "command": ".vscode/tasks/ConfigureCmake.sh",
       "presentation": {
         "clear": true
       },
@@ -65,12 +59,7 @@
     {
       "label": "Count Lines of C/C++ Code",
       "type": "shell",
-      "command": [
-        "echo -n \"Lines of C and C++: \" &&",
-        "find -regex '.*\\.\\(hpp\\|cpp\\|c\\|h\\|hxx\\|cxx\\|cc\\|hh\\)$' |",
-        "grep -E -i -v '^./(Debug|Release)' |",
-        "xargs awk 'END{print NR}'"
-      ],
+      "command": ".vscode/tasks/CountLines.sh",
       "presentation": {
         "clear": true
       }
@@ -78,14 +67,7 @@
     {
       "label": "View File Assembly",
       "type": "shell",
-      "command": [
-        "[[ '${fileBasename}' == *.[ch]* ]] &&",
-        "(gcc -fno-asynchronous-unwind-tables -fno-exceptions ",
-        "-funroll-loops -fno-rtti -O -masm=intel -march=haswell -fverbose-asm ",
-        "-S '${fileBasename}' -o '/tmp/${fileBasenameNoExtension}.s') &&",
-        "code '/tmp/${fileBasenameNoExtension}.s' ||",
-        "echo \"The current file is not a C or C++ file extension.\""
-      ],
+      "command": ".vscode/tasks/ViewAssembly.sh",
       "problemMatcher": {
         "base": "$gcc",
         "fileLocation": "absolute"
