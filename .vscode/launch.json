@@ -8,14 +8,15 @@
       "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "setupCommands": [
+      "preLaunchTask": "Debug Build",
+      "setupCommands":
+      [
           {
               "description": "Enable pretty-printing for gdb",
               "text": "-enable-pretty-printing",
               "ignoreFailures": true
           }
       ],
-      "preLaunchTask": "Debug Build",
 
       "args" :
       [
@@ -28,12 +29,7 @@
       "type": "cppdbg",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
-      "preLaunchTask": "Release Build",
-
-      "args" :
-      [
-
-      ]
+      "preLaunchTask": "Release Build"
     }
   ]
 }

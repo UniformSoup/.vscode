@@ -2,12 +2,8 @@
     "configurations": [
         {
             "name": "Debug",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "DEBUG"
-            ],
+            "includePath": [ "${workspaceFolder}/**" ],
+            "defines": [ "DEBUG" ],
             "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",
@@ -15,12 +11,8 @@
         },
         {
             "name": "Release",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "NDEBUG"
-            ],
+            "includePath": [ "${workspaceFolder}/**" ],
+            "defines": [ "NDEBUG" ],
             "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",

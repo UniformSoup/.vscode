@@ -7,75 +7,46 @@
       "type": "shell",
       "command": ".vscode/tasks/Build.sh",
       "args": ["Debug"],
-      "problemMatcher": {
-        "base": "$gcc",
-        "fileLocation": "absolute"
-      },
-      "presentation": {
-        "clear": true
-      },
-      "group": {
-        "kind": "build"
-      }
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
     },
     {
       "label": "Release Build",
       "type": "shell",
       "command": ".vscode/tasks/Build.sh",
       "args": ["Release"],
-      "problemMatcher": {
-        "base": "$gcc",
-        "fileLocation": "absolute"
-      },
-      "presentation": {
-        "clear": true
-      },
-      "group": {
-        "kind": "build"
-      }
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
     },
     {
       "label": "Clean",
       "type": "shell",
       "command": ".vscode/tasks/Clean.sh",
-      "presentation": {
-        "clear": true
-      },
-      "group": {
-        "kind": "build"
-      }
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
     },
     {
       "label": "Configure CMake",
       "type": "shell",
       "command": ".vscode/tasks/ConfigureCmake.sh",
-      "presentation": {
-        "clear": true
-      },
-      "group": {
-        "kind": "build"
-      }
+      "presentation": { "clear": true },
+      "group": { "kind": "build" }
     },
     {
       "label": "Count Lines of C/C++ Code",
       "type": "shell",
       "command": ".vscode/tasks/CountLines.sh",
-      "presentation": {
-        "clear": true
-      }
+      "presentation": { "clear": true }
     },
     {
       "label": "View File Assembly",
       "type": "shell",
       "command": ".vscode/tasks/ViewAssembly.sh",
       "args": [ "${file}" ],
-      "problemMatcher": {
-        "base": "$gcc",
-        "fileLocation": "absolute"
-      },
-      "presentation": {
-        "clear": true
-      }
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "clear": true }
     }
   ]
 }
