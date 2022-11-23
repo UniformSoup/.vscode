@@ -16,5 +16,6 @@
     },
     "terminal.integrated.defaultProfile.windows": "MINGW64",
     "task.problemMatchers.neverPrompt": true,
-    "debug.onTaskErrors": "showErrors"
+    "debug.onTaskErrors": "showErrors",
+    "explorer.copyRelativePathSeparator": "/"
 }
