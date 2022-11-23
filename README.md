@@ -17,5 +17,10 @@ With these packages installed:
 ```bash
 pacman -S base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
 ```
+Don't forget to add the following to /etc/fstab:
+```
+none /tmp usertemp binary,posix=0 0 0
+```
+Then restart all MSYS2 Processes, and type ```mount```
 
 It also requires the [C/C++ Extension](https://github.com/microsoft/vscode-cpptools) for VS Code.
