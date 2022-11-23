@@ -1,19 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Debug",
-            "includePath": [ "${workspaceFolder}/**" ],
+            "name": "MINGW64",
+            "includePath":
+            [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include/**"
+            ],
             "defines": [ "DEBUG" ],
             "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
-            "cStandard": "gnu17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "windows-gcc-x64"
-        },
-        {
-            "name": "Release",
-            "includePath": [ "${workspaceFolder}/**" ],
-            "defines": [ "NDEBUG" ],
-            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
+            "compilerArgs": [ "-Wall", "-Wfatal-errors" ],
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "windows-gcc-x64"
