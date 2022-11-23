@@ -3,8 +3,8 @@
   [
     {
       "name": "Debug",
-      "type": "cppdbg",
       "request": "launch",
+      "type": "cppdbg",
       "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
@@ -12,7 +12,6 @@
       "setupCommands":
       [
           {
-              "description": "Enable pretty-printing for gdb",
               "text": "-enable-pretty-printing",
               "ignoreFailures": true
           }
