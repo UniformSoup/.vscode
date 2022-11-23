@@ -4,12 +4,13 @@
         "MINGW64":
         {
             "path": "C:/msys64/usr/bin/bash.exe",
-            "env": 
-            { 
+            "env":
+            {
+                "CHERE_INVOKING": "1",
                 "MSYSTEM": "MINGW64",
                 "MSYS2_PATH_TYPE": "inherit",
-                "CHERE_INVOKING": "1",
-                "MSYSCON": "defterm"
+                // THE FOLLOWING IS A HACK TO PLACE THE MSYS PATHS BEFORE THE WINDOWS ONES
+                "PATH": "/usr/bin;/mingw64/bin;${env:PATH}"
             },
             "color": "terminal.ansiMagenta"
         }
