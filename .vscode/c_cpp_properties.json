@@ -8,7 +8,7 @@
                 "C:/msys64/mingw64/include/**"
             ],
             "defines": [ "DEBUG" ],
-            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
+            "compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "compilerArgs": [ "-Wall", "-Wfatal-errors" ],
             "cStandard": "gnu17",
             "cppStandard": "gnu++17",
