@@ -10,7 +10,7 @@
                 "MSYSTEM": "MINGW64",
                 "MSYS2_PATH_TYPE": "inherit",
                 // THE FOLLOWING IS A HACK TO PLACE THE MSYS PATHS BEFORE THE WINDOWS ONES
-                "PATH": "/mingw64/bin;/usr/local/bin;/usr/bin;/bin;${env:PATH};/usr/bin/site_perl;/usr/bin/vendor_perl;/usr/bin/core_perl"
+                "PATH": "/mingw64/bin;/usr/local/bin;/usr/bin;/bin;${env:PATH}"
             },
             "color": "terminal.ansiMagenta"
         }
