@@ -68,15 +68,13 @@
       "label": "View File Assembly",
       "type": "shell",
       "command": ".vscode/tasks/ViewAssembly.sh",
+      "args": [ "${file}" ],
       "problemMatcher": {
         "base": "$gcc",
         "fileLocation": "absolute"
       },
       "presentation": {
         "clear": true
-      },
-      "options": {
-        "cwd": "${fileDirname}"
       }
     }
   ]
