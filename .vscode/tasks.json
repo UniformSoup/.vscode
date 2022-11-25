@@ -31,6 +31,7 @@
       "label": "Configure CMake",
       "type": "shell",
       "command": ".vscode/tasks/ConfigureCmake.sh",
+      "args": [ ".vscode/mingw-windows.cmake" ],
       "presentation": { "echo": false, "showReuseMessage": false },
       "group": { "kind": "build" }
     },

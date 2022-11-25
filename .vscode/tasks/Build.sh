@@ -1,8 +1,8 @@
 #!/bin/bash
 
-while read -r line
+while read -r line 
 do
-    line=$(echo $line | tr -d "\r")
+    line=${line//$'\r'/}
     if [ "$line" == "ninja: no work to do." ];
     then
         echo "Nothing to do."
