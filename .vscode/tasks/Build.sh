@@ -1,9 +1,12 @@
 #!/bin/bash
 
-out=$(cmake --build $1)
-
-if [[ $out =~ ^ninja: ]]; then
-    echo "Nothing to build."
-else
-    echo "$out"
-fi
+while read -r line
+do
+    line=$(echo $line | tr -d "\r")
+    if [ "$line" == "ninja: no work to do." ];
+    then
+        echo "Nothing to do."
+    else
+        echo "$line"
+    fi
+done < <(cmake --build $1)
