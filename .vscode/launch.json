@@ -9,6 +9,7 @@
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
       "preLaunchTask": "Debug Build",
+      "externalConsole": true,
       "setupCommands":
       [
           {
@@ -28,7 +29,8 @@
       "type": "cppdbg",
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
-      "preLaunchTask": "Release Build"
+      "preLaunchTask": "Release Build",
+      "externalConsole": true 
     }
   ]
 }
