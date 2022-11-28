@@ -6,8 +6,13 @@ then
     gcc -fno-asynchronous-unwind-tables -fno-exceptions -ffunction-sections -fdata-sections \
         -funroll-loops -fno-rtti -Os -masm=intel -march=haswell -fverbose-asm \
         -S "$1" -o "$temp"
-    code $temp
-    echo "Viewing Assembly For: $1"
+    if [ $? -eq 0 ]
+    then
+        code "$temp"
+        echo "Viewing Assembly For: $1"
+    else
+        echo "Could Not Compile: $1"
+    fi
 else
     echo "$1 is not a C or C++ file."
 fi
