@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-cmake_path(GET CMAKE_SOURCE_DIR STEM FOLDER_STEM)
+get_filename_component(FOLDER_STEM ${CMAKE_SOURCE_DIR} NAME)
 string(REGEX REPLACE "[^0-9a-zA-Z_+\-\.]" "_" FOLDER_STEM_TARGET ${FOLDER_STEM})
 
 project("${FOLDER_STEM_TARGET}" VERSION 1.0)
