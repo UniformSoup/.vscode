@@ -48,6 +48,12 @@
       "args": [ "'${file}'" ],
       "problemMatcher": "$gcc",
       "presentation": { "echo": false, "showReuseMessage": false }
+    },
+    {
+      "label": "Format",
+      "type": "shell",
+      "command": ".vscode/tasks/Format.sh",
+      "presentation": { "echo": false, "showReuseMessage": false }
     }
   ]
 }
