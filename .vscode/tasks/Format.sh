@@ -1,13 +1,13 @@
 #!/bin/bash
 
-excluded_directories=('Debug' 'Release' '.vscode' 'Doxygen')
+excluded_directories=('Debug' 'Release' '.vscode' 'Doxygen' 'glfw')
 excluded_directories=$(printf "|%s" "${excluded_directories[@]}")
 excluded_directories=${excluded_directories:1}
 
-format_files=$(find . -regex '.*\.\(cpp\|hpp\|\c\|h\|cc\|hh\|cxx\|hxx\)$' | \
-    grep -E -i -v "^./($excluded_directories)")
+format_files=$(find . | grep ".*\.\(cpp\|hpp\|\c\|h\|cc\|hh\|cxx\|hxx\)$" | grep -Eiv "^./($excluded_directories)")
 
 for file in $format_files
 do
+  echo "Formatting $file"
   clang-format -i "$file"
 done
