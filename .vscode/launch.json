@@ -5,9 +5,14 @@
       "name": "Debug",
       "request": "launch",
       "type": "cppdbg",
-      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
+      "windows":
+      {
+        "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
+      },
+      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}",
+      
       "cwd": "${workspaceFolder}",
-      "MIMode": "gdb",
+      "MIMode": "lldb",
       "preLaunchTask": "Debug Build",
       "externalConsole": true,
       "setupCommands":
@@ -28,7 +33,11 @@
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
+      "windows":
+      {
+        "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
+      },
+      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}",
       "preLaunchTask": "Release Build",
       "externalConsole": true 
     }
