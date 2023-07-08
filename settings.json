@@ -17,5 +17,6 @@
     "terminal.integrated.defaultProfile.windows": "MINGW64",
     "task.problemMatchers.neverPrompt": true,
     "debug.onTaskErrors": "showErrors",
-    "explorer.copyRelativePathSeparator": "/"
+    "explorer.copyRelativePathSeparator": "/",
+    "C_Cpp.default.intelliSenseMode": "clang-x64"
 }
