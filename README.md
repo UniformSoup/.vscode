@@ -1,13 +1,8 @@
-# VSCodeWorkspace
+# .vscode
 My VS Code Environment for C++.
 
-To use you can run in an MSYS2 shell:
 ```bash
-curl -L https://github.com/UniformSoup/VSCodeWorkspace/tarball/main | tar --exclude='README.md' --strip=1 -zx
-```
-If the directory is empty you can just run in the MSYS2 shell instead:
-```bash
-git clone https://github.com/UniformSoup/VSCodeWorkspace.git . && rm -rf .git README.md
+git submodule add https://github.com/UniformSoup/.vscode
 ```
 
 You should use git for windows.
