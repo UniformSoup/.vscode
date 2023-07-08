@@ -9,6 +9,5 @@ format_files=$(find . | grep ".*\.\(cpp\|hpp\|\c\|h\|cc\|hh\|cxx\|hxx\)$" | grep
 for file in $format_files
 do
   echo "Formatting $file"
-  clang-format -i "$file" -style=file: ./.vscode/.clang-format
-
+  clang-format -i "$file" 
 done
