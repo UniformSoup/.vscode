@@ -6,8 +6,8 @@
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}/Debug",
-      "windows": { "program": "${workspaceFolderBasename}.exe" },
-      "program": "${workspaceFolderBasename}",
+      "windows": { "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe" },
+      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}",
       "preLaunchTask": "Debug Build",
       "externalConsole": false,
       "MIMode": "lldb",
@@ -18,8 +18,8 @@
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}/Release",
-      "windows": { "program": "${workspaceFolderBasename}.exe" },
-      "program": "${workspaceFolderBasename}",
+      "windows": { "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe" },
+      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}",
       "preLaunchTask": "Release Build",
       "externalConsole": false 
     }
