@@ -4,7 +4,7 @@
       {
         "name": "DEFAULT",
         "intelliSenseMode": "clang-x64",
-        "includePath": ["${workspaceFolder}/**"],
+        "includePath": ["${workspaceFolder}/**", "${workspaceFolder}/VulkanBase/include"],
         "defines": ["DEBUG"]
       }
     ],
