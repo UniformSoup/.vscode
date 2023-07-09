@@ -5,41 +5,23 @@
       "name": "Debug",
       "request": "launch",
       "type": "cppdbg",
-      "windows":
-      {
-        "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe",
-      },
-      "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}",
-      
-      "cwd": "${workspaceFolder}",
-      "MIMode": "lldb",
+      "cwd": "${workspaceFolder}/Debug",
+      "windows": { "program": "${workspaceFolderBasename}.exe" },
+      "program": "${workspaceFolderBasename}",
       "preLaunchTask": "Debug Build",
       "externalConsole": false,
-      "setupCommands":
-      [
-          {
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          }
-      ],
-
-      "args" :
-      [
-        
-      ]
+      "MIMode": "lldb",
+      "args": []
     },
     {
       "name": "Release",
       "request": "launch",
       "type": "cppdbg",
-      "cwd": "${workspaceFolder}",
-      "windows":
-      {
-        "program": "${workspaceFolder}/Release/${workspaceFolderBasename}.exe",
-      },
-      "program": "${workspaceFolder}/Release/${workspaceFolderBasename}",
+      "cwd": "${workspaceFolder}/Release",
+      "windows": { "program": "${workspaceFolderBasename}.exe" },
+      "program": "${workspaceFolderBasename}",
       "preLaunchTask": "Release Build",
-      "externalConsole": true 
+      "externalConsole": false 
     }
   ]
 }
