@@ -6,10 +6,10 @@
       "request": "launch",
       "type": "cppdbg",
       "cwd": "${workspaceFolder}/Debug",
-      "windows": { "MIMode": "gdb", "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe" },
+      "windows": { "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe", "MIMode": "gdb", "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}.exe" },
       "program": "${workspaceFolder}/Debug/${workspaceFolderBasename}",
       "preLaunchTask": "Debug Build",
-      "externalConsole": false,
+      "externalConsole": true,
       "MIMode": "lldb",
       "args": []
     },
