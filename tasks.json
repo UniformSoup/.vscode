@@ -49,14 +49,6 @@
       "presentation": { "echo": false, "showReuseMessage": false }
     },
     {
-      "label": "View File Assembly",
-      "type": "shell",
-      "command": ".vscode/tasks/ViewAssembly.sh",
-      "args": [ "'${file}'" ],
-      "problemMatcher": "$gcc",
-      "presentation": { "echo": false, "showReuseMessage": false }
-    },
-    {
       "label": "Format All",
       "type": "shell",
       "command": ".vscode/tasks/FormatAll.sh",
@@ -66,7 +58,7 @@
       "label": "Format",
       "type": "shell",
       "command": "clang-format",
-      "args": [ "'${file}'" ],
+      "args": [ "-i", "${relativeFile}" ],
       "presentation": { "echo": false, "showReuseMessage": false }
     }
   ]
