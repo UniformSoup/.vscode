@@ -14,7 +14,7 @@
       "cwd": "${workspaceFolder}",
       "MIMode": "lldb",
       "preLaunchTask": "Debug Build",
-      "externalConsole": true,
+      "externalConsole": false,
       "setupCommands":
       [
           {

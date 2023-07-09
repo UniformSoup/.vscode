@@ -30,14 +30,14 @@
     {
       "label": "Configure CMake",
       "type": "shell",
-      "command": ".vscode/tasks/ConfigureCmake.sh",
+      "command": ".vscode/tasks/ConfigureCMake.sh",
       "windows":
       {
-        "args": [ ".vscode/mingw-windows.cmake" ]
+        "args": [ ".vscode/windows.cmake" ]
       },
       "osx":
       {
-        "args": [ ".vscode/gcc-osx.cmake" ]
+        "args": [ ".vscode/osx.cmake" ]
       },
       "presentation": { "echo": false, "showReuseMessage": false },
       "group": { "kind": "build" }
@@ -57,9 +57,16 @@
       "presentation": { "echo": false, "showReuseMessage": false }
     },
     {
+      "label": "Format All",
+      "type": "shell",
+      "command": ".vscode/tasks/FormatAll.sh",
+      "presentation": { "echo": false, "showReuseMessage": false }
+    },
+    {
       "label": "Format",
       "type": "shell",
-      "command": ".vscode/tasks/Format.sh",
+      "command": "clang-format",
+      "args": [ "'${file}'" ],
       "presentation": { "echo": false, "showReuseMessage": false }
     }
   ]

@@ -1,0 +1,12 @@
+{
+    "configurations":
+    [
+      {
+        "name": "DEFAULT",
+        "intelliSenseMode": "clang-x64",
+        "includePath": ["${workspaceFolder}/**"],
+        "defines": ["DEBUG"]
+      }
+    ],
+    "version": 4
+  }
