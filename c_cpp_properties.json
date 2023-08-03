@@ -5,6 +5,7 @@
         "name": "DEFAULT",
         "intelliSenseMode": "clang-x64",
         "includePath": ["${workspaceFolder}/**", "${workspaceFolder}/VulkanBase/include"],
+        "cppStandard": "c++17",
         "defines": ["DEBUG"]
       }
     ],

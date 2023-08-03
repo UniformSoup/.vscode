@@ -20,6 +20,7 @@
     "explorer.copyRelativePathSeparator": "/",
     "C_Cpp.default.intelliSenseMode": "clang-x64",
     "files.associations": {
-        "memory": "cpp"
+        "memory": "cpp",
+        "chrono": "cpp"
     }
 }
