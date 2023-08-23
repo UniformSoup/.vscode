@@ -1,6 +1,6 @@
 #!/bin/bash
 
-excluded_directories=('Debug' 'Release' '.vscode' 'glm' 'glfw')
+excluded_directories=('Debug' 'Release' '.vscode' 'glm' 'glfw' 'imgui')
 
 echo -n "Lines of C and C++: "
 
