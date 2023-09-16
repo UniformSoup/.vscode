@@ -1,6 +1,6 @@
 #!/bin/bash
 
-excluded_directories=('Debug' 'Release' '.vscode' 'Doxygen' 'glfw' 'glm')
+excluded_directories=('Debug' 'Release' '.vscode' 'Doxygen' 'glfw' 'glm' 'json.hpp' 'stb' 'imgui')
 excluded_directories=$(printf "|%s" "${excluded_directories[@]}")
 excluded_directories=${excluded_directories:1}
 
