@@ -22,5 +22,6 @@
     "files.associations": {
         "memory": "cpp",
         "chrono": "cpp"
-    }
+    },
+    "C_Cpp.dimInactiveRegions": true
 }
