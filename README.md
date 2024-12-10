@@ -1,6 +1,7 @@
 # .vscode
 My VS Code Environment for C++.
 
+
 ```bash
 git submodule add https://github.com/UniformSoup/.vscode
 ```
@@ -18,4 +19,5 @@ none /tmp usertemp binary,posix=0 0 0
 ```
 Then restart all MSYS2 Processes, and type ```mount```
 
-It also requires the [C/C++ Extension](https://github.com/microsoft/vscode-cpptools) for VS Code.
+## TODO:
+- Add clangformat capabilities (script looks in current dir first, then in default .vscode dir.)
